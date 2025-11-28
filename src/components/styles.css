@@ -1,0 +1,282 @@
+
+
+@property --lightB{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ccdbdc;
+}
+
+@property --fieldB {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #9ad1d4;
+}
+
+@property --hover {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #80ced7;
+}
+
+@property --primaryB {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #007ea7;
+}
+
+@property --text {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #003249;
+}
+.main-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--lightB);
+    padding-top: 40px;
+}
+
+/* General Page */
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*Form Container*/
+
+.registration-form-container {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/*Form Heading*/
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text)
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--fieldB);
+    background-color: var(--lightB);
+    font-size: 1rem;
+    transition: border 0.2s, background 0.2;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--primaryB);
+    background-color: var(--hover);
+    outline: none;
+}
+
+/*Button*/
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button-submit {
+    background-color: var(--primaryB);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3;
+}
+
+button.submit{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button.submit:hover{
+    background-color: var(--text);
+}
+
+/*Message*/
+
+.message {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message.succes {
+    background-color: var(--hover);
+    color: var(--text)
+}
+
+.message.error{
+    background-color: #FFB6B6;
+    color: #700000;
+}
+
+
+
+.form-field input,
+.form-field textarea {
+font-size: 0.95rem;
+padding: 0.5rem 0.7rem;
+}
+
+button.submit {
+font-size: 0.95rem;
+padding: 0.7rem 1.2rem;
+}
+
+.registration-form-container h2 {
+font-size: 1.5rem;
+}
+
+
+/*Student list*/
+
+.student-list-container {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--lightB);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.student-list-container h2 {
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.student-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.student-table th {
+    background: var(--primaryB);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.student-table td{
+    padding: 12px;
+    border-bottom: 1px solid var(--hover);
+}
+
+.student-table tr:nth-child(even) {
+    background: #f0f8fa;
+}
+
+.student-table tr:hover {
+    background: var(--fieldB);
+    transition: 0.2s;
+}
+
+.no-students {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #003249;
+  font-weight: bold;
+}
+
+/*Delete Button */
+
+.delete-btn {
+  background: #d9534f;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #b52b27;
+}
+
+/* Login Page */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightB);
+}
+
+.login-container {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: 1px solid var(--fieldB);
+    border-radius: 8px;
+    background: var(--lightB);
+}
+
+.login-button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background: var(--primaryB);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background: var(--text);
+}
+
+/*Responsive adjustments */
+@media (max-width: 600px) {
+.registration-form-container {
+padding: 1.5rem 1.8rem;
+width: 90%;
+}
+}
+
+

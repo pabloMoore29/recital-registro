@@ -1,0 +1,43 @@
+@property --lightB{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ccdbdc;
+}
+
+@property --fieldB {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #9ad1d4;
+}
+
+@property --hover {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #80ced7;
+}
+
+@property --primaryB {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #007ea7;
+}
+
+@property --text {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #003249;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: var(--lightB);
+  color: var(--text);
+  min-height: 100vh;
+  width: 100%;
+}
