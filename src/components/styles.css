@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: var(--lightB);
+    background: red;
     padding-top: 40px;
 }
 
