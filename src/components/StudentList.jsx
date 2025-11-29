@@ -54,16 +54,29 @@ function StudentList({ refresh }) {
                   <button
                     className="delete-btn"
                     onClick={async () => {
-                      if (confirm(`¿Eliminar a ${s.nombre}?`)) {
-                        const result = await deleteStudent(s.nombre);
+                         // 1. Ask admin password
+                        const adminPassword = prompt("Introduce la contraseña de administrador");
+
+                        if(!adminPassword) return alert("Eliminación Cancelada");
+                        if(adminPassword !== "RecitalMus-025") {
+                            return alert("❌ Contraseña incorrecta. No tienes permiso para eliminar.");
+                        }
+                          // 2. Confirm deletion 
+
+                        if(!confirm(`¿Eliminar a ${s.nombre}?`)) return
+
+                         // 3. Delete Student
+
+                         const result = await deleteStudent(s.nombre);
 
                         if (result.success) {
+                            alert("Alumno eliminado correctamente.")
                           // reload the list
                           refresh();
                         } else {
                           alert("Error al eliminar el registro.");
                         }
-                      }
+                      
                     }}
                   >
                     ❌
