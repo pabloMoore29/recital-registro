@@ -1,4 +1,4 @@
-const url = "https://script.google.com/macros/s/AKfycbwWVyGBVtenMuNJykrihQuucFiB5J-pBiFuWmICLBxQZFdZZ_df_RGx9fNB3tr4Xfmn/exec";
+const url = "https://script.google.com/macros/s/AKfycby8lmMk5bgvOEqgMwirHxIURjBADzInamsxrJxuKN7CjfZiTLD98RX7IAMElCbs6OtQ/exec";
 
 export async function submitRegistration(data) {
     const form = new FormData();
@@ -49,12 +49,11 @@ return data.students || [];
 }
 
 
-export async function deleteStudent(nombre){
-    const response = await fetch(`${url}?nombre=${encodeURIComponent(nombre)}`, {
-        method: "DELETE",
-    });
-    return response.json();
+export async function deleteStudent(nombre) {
+  const response = await fetch(`${url}?deleteStudent=${encodeURIComponent(nombre)}`);
+  return response.json();
 }
+
 
 export async function fetchStudents() {
   const response = await fetch(`${url}?listStudents=true`);

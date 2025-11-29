@@ -59,7 +59,7 @@ function StudentList({ refresh }) {
 
                         if (result.success) {
                           // reload the list
-                          window.location.reload();
+                          refresh();
                         } else {
                           alert("Error al eliminar el registro.");
                         }

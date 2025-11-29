@@ -21,7 +21,7 @@ if(!isLogged) {
   return (
     <div className="main-page">
       <RegistrationForm onRegisterSuccess={handleRefresh}/>
-      <StudentList refresh={refresh}/>
+      <StudentList refresh={handleRefresh}/>
     </div>
   )
 }
