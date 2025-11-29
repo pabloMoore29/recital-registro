@@ -8,6 +8,19 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx">
+      for(let i = 0; i < 30; i++){
+        const flake = document.createElement("div");
+        flake.className = "snowflake";
+        flake.textContent = "❄";
+
+        flake.style.left = Math.random() * 100 + "vw";
+        flake.style.animationDuration = 3 + Math.random() * 5 + "s";
+        flake.style.opacity = 0.4 + Math.random() * 0.6;
+        flake.style.fontSize = 12 + Math.random() * 18 + "px";
+
+        document.body.appendChild(flake);
+      }
+    </script>
   </body>
 </html>
