@@ -97,11 +97,11 @@ function RegistrationForm({onRegisterSuccess}) {
           </div>
           <div className="form-field">
             <label>Compositor</label>
-            <input name="compositor" value={form.compositor} onChange={handleChange} />
+            <input name="compositor" value={form.compositor} onChange={handleChange} required/>
           </div>
           <div className="form-field">
             <label>Maestro</label>
-            <input name="maestro" value={form.maestro} onChange={handleChange} />
+            <input name="maestro" value={form.maestro} onChange={handleChange} required/>
           </div>
           <div className="form-field">
             <label>Notas</label>
